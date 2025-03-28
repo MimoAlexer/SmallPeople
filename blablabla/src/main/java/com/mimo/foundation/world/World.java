@@ -20,11 +20,18 @@ public class World {
     public void printOut() {
         for (int y = 0; y < WORLD_HEIGHT; y++) {
             for (int x = 0; x < WORLD_WIDTH; x++) {
+                Tile tile = tiles[x][y];
+                String symbol;
+                java.awt.Color color;
                 if (x == Main.getPlayer().getX() && y == Main.getPlayer().getY()) {
-                    System.out.print(TileTypes.Player.getSymbol() + " ");
+                    symbol = com.mimo.foundation.world.Tiles.TileTypes.Player.getSymbol();
+                    color = com.mimo.foundation.world.Tiles.TileTypes.Player.getColor();
                 } else {
-                    System.out.print(tiles[x][y].getDefaultType().getSymbol() + " ");
+                    symbol = tile.getDefaultType().getSymbol();
+                    color = tile.getDefaultType().getColor();
                 }
+                System.out.printf("\033[38;2;%d;%d;%dm%s \033[0m", 
+                    color.getRed(), color.getGreen(), color.getBlue(), symbol);
             }
             System.out.println();
         }

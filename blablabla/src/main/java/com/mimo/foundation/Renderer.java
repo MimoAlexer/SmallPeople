@@ -2,13 +2,9 @@ package com.mimo.foundation;
 
 import com.mimo.Main;
 import com.mimo.foundation.world.World;
-import com.mimo.foundation.world.Worldgen.WorldGeneration;
 
 public class Renderer {
-    public static World world;
-    public static void render() throws InterruptedException {
-        WorldGeneration worldGenerator = new WorldGeneration();
-        world = worldGenerator.generateWorld(worldGenerator.seedGenerate());
+    public static void render(World world) throws InterruptedException {
         while (Main.isRunning) {
             // clear screen before drawing
             System.out.print("\033[H\033[2J");
