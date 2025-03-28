@@ -1,0 +1,18 @@
+# Maven target directory
+target/
+
+# Compiled class files
+*.class
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# OS generated files
+.DS_Store
+
+# IDE configuration files (adjust as needed)
+.idea/
+*.iml
+.settings/
+.vscode/
