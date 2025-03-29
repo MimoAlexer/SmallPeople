@@ -1,18 +1,56 @@
-# Maven target directory
+# Maven build output
 target/
+build/
+bin/
 
 # Compiled class files
 *.class
 
+# Maven specific files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
 # Logs and temporary files
 *.log
 *.tmp
+hs_err_pid*
 
-# OS generated files
+# OS generated files (macOS, Windows)
 .DS_Store
+Thumbs.db
+._*
 
-# IDE configuration files (adjust as needed)
+# IDE and Editor directories and files
+.vscode/
 .idea/
 *.iml
+*.ipr
+*.iws
 .settings/
-.vscode/
+
+# Backup files
+*~
+*.bak
+*.swp
+
+# Code coverage and reports
+coverage/
+*.coveragereport
+*.jacoco
+
+# Node modules (if you have any front-end code)
+node_modules/
+
+# Gradle (if applicable)
+.gradle/
+
+# Other misc artifacts
+/build/
